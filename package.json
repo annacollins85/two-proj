@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install:all": "npm install --prefix lang-urls",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "npm run generate --prefix lang-urls"
   },
   "author": "",
   "license": "ISC"
