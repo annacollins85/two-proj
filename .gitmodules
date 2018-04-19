@@ -1,0 +1,3 @@
+[submodule "lang-urls"]
+	path = lang-urls
+	url = https://github.com/annacollins85/lang-urls.git
