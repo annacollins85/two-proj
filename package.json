@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "",
-    "install:all": "npm install --prefix lang-urls",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "npm run generate --prefix lang-urls"
+    "build": "npm run build:middleman && npm run build:nuxt && mv -v .build-nuxt/* .build/ && rm -rf .build-nuxt",
+    "build:nuxt": "npm run build --prefix lang-urls",
+    "build:middleman": "bundle exec middleman build",
+    "install": "npm run install:middleman && npm run install:nuxt",
+    "install:nuxt": "npm install --prefix lang-urls",
+    "install:middleman": "BUNDLE_GEMFILE=./Middle/Gemfile bundle install",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
